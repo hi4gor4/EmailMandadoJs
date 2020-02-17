@@ -1,0 +1,9 @@
+{
+  "name": "emailJs",
+  "version": "1.0.0",
+  "description": "Projeto para mandar email com o git",
+  "main": "index.js",
+  "repository": "https://github.com/hiagoRan/EmailMandadoJs.git",
+  "author": "Hiaguinho e Cleytinho",
+  "license": "MIT"
+}
