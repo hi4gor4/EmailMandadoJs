@@ -9,4 +9,12 @@ router.get('/postagens', (req, res)=>{
     })
 })
 
+router.get('/postagens/comentarios', (req,res)=> {
+    res.json({
+        Nome: 'João',
+        Email: 'João@pédefeijão.com',
+        Comentário: 'O gigante é um corno'
+    })
+})
+
 module.exports = router;
