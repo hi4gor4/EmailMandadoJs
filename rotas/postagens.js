@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/postagens', (req, res)=>{
     res.json({
-        titulo: 'Primeira postagem',
+        título: 'Primeira postagem',
         descição: 'Vários problemas! :C', 
         autor: 'Cleyton'
     })
