@@ -10,6 +10,9 @@ app.get('/dale', (req, res)=>{
     res.send('funcionando')
 })
 
+const rotas = require('./rotas');
+app.use('/api', rotas);
+
 
 const port = 3001;
 app.listen(port, () =>  {
