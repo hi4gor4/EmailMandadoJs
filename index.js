@@ -15,7 +15,10 @@ app.use('/api', rotas);
 
 
 const port = 3001;
+
 app.listen(port, () =>  {
     console.log('server running on http://localhost:' , port);
 } );
+
+app.use(express.static(__dirname + '/client'))
 
