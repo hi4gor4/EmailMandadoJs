@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.get('/', (req, res)=>{
+app.get('/dale', (req, res)=>{
     res.send('funcionando')
 })
 
