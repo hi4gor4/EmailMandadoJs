@@ -11,6 +11,10 @@ app.get('/dale', (req, res)=>{
 })
 
 
+const routes = require('./routes');
+app.use('/api', routes);
+
+
 const port = 3001;
 app.listen(port, () =>  {
     console.log('server running on http://localhost:' , port);
