@@ -1,2 +1,14 @@
 const express = require("express");
-const body_parser = require("body-parser");
+const bodyParser = require("body-parser");
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+
+const port = 3001;
+app.listen(port, () =>  {
+    console.log('server running on http://localhost:' , port);
+} );
+
