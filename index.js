@@ -6,12 +6,18 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.get('/dale', (req, res)=>{
-    res.send('funcionando')
-})
-
 const rotas = require('./rotas');
 app.use('/api', rotas);
+
+
+
+
+
+
+
+
+
+
 
 
 const port = 3001;

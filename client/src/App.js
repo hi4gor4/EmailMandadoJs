@@ -10,6 +10,11 @@ function App() {
   .then(response => {console.log(response)
     axios.get('/comentario/1')
     .then(function(response) {console.log('1',response)} )
+
+    axios.get('/relatorio/arquivao.pdf')
+    .then(function(response) {console.log('relatorio.pdf',response)} )
+
+
     axios.get('/comentario/2')
     .then(response=>{console.log('2', response)} )
     axios.get('/comentario/3')
