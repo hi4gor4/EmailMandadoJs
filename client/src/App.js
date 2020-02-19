@@ -8,8 +8,12 @@ function App() {
   function sayHello(){
     axios.get('/postagens')
   .then(response => {console.log(response)
-    axios.get('/comentario/um')
-    .then(function(response) {console.log(response)} )
+    axios.get('/comentario/1')
+    .then(function(response) {console.log('1',response)} )
+    axios.get('/comentario/2')
+    .then(response=>{console.log('2', response)} )
+    axios.get('/comentario/3')
+    .then(function(response){console.log('3',response)})
   })
   }
   return (
