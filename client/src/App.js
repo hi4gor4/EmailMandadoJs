@@ -1,13 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-const axios = require('axios');
+const axios = require('axios').default;
 
 function App() {
 
   function sayHello(){
-    alert('Hello!');
-    console.log("Deu bom agora! hehe")
+    axios.get('/postagens')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
   }
   return (
     <div className="App">
@@ -24,7 +27,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={() => alert('Hello!')}> BOTÃO XD</button>
+        <button onClick={sayHello}> BOTÃO XD kkkk</button>
       </header>
     </div>
   );
