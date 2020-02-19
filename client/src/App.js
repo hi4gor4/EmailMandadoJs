@@ -4,24 +4,33 @@ import './App.css';
 const axios = require('axios').default;
 
 function App() {
+ 
+
+
+  function criarRelatorio(){
+    axios.get('/relatorio/asdfa')
+    .then(function(response) {console.log('1',response)} )
+  }
+
+  function imprimirRelatorio(){
+    window.open('http://localhost:3001/api/pdf/asdfa','__blank')
+  }
 
   function sayHello(){
     axios.get('/postagens')
   .then(response => {console.log(response)
     axios.get('/comentario/1')
-    .then(function(response) {console.log('1',response)} )
-
-    axios.get('/relatorio/arquivao.pdf')
-    .then(function(response) {console.log('relatorio.pdf',response)} )
-
-
+    .then(function(response) {console.log('1',response)} )  
     axios.get('/comentario/2')
     .then(response=>{console.log('2', response)} )
     axios.get('/comentario/3')
     .then(function(response){console.log('3',response)})
   })
   }
+
   return (
+
+
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -36,7 +45,9 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={sayHello}> BOTÃO XD! kkkk</button>
+       
+        <button onClick={criarRelatorio}> Criar Relatório </button>
+        <button onClick={imprimirRelatorio}> Imprimir Relatório </button>
       </header>
     </div>
   );
