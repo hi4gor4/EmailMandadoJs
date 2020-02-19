@@ -7,9 +7,9 @@ function App() {
 
   function sayHello(){
     axios.get('/postagens')
-  .then(function (response) {
-    // handle success
-    console.log(response);
+  .then(response => {console.log(response)
+    axios.get('/comentario/um')
+    .then(function(response) {console.log(response)} )
   })
   }
   return (
@@ -27,7 +27,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={sayHello}> BOTÃO XD kkkk</button>
+        <button onClick={sayHello}> BOTÃO XD! kkkk</button>
       </header>
     </div>
   );
