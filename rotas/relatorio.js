@@ -4,7 +4,7 @@ const fs = require("fs");
 const pdf = require("html-pdf");
 const PDFKit = require('pdfkit');
 const pdfByKit = new PDFKit();
-const conteudo = fs.readFileSync('./rotas/relato.html','utf8')
+const conteudo = fs.readFileSync('./rotas/relatorio.html','utf8')
 
 router.get('/relatorio/:nome', (req,res)=>{
     var x = './'+req.params.nome+'.pdf'
